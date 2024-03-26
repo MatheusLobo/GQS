@@ -28,7 +28,6 @@ jobs:
 
     - name: Run tests
       run: mvn -B test --file pom.xml
-      working-directory: ./gqs
 
     - name: Upload JAR artifact
       uses: actions/upload-artifact@v2
