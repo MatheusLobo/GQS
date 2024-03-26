@@ -23,14 +23,13 @@ jobs:
         distribution: 'adopt'  
 
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
-
+      run: mvn -B package
 
     - name: Run tests
-      run: mvn -B test --file pom.xml
+      run: mvn -B test
 
     - name: Upload JAR artifact
       uses: actions/upload-artifact@v2
       with:
         name: gqs
-        path: gqs/gqs/target/gqs-1.0-SNAPSHOT.jar
+        path: target/gqs-1.0-SNAPSHOT.jar
