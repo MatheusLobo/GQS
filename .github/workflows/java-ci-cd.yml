@@ -24,12 +24,14 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      working-directory: ./gqs/gqs
 
     - name: Run tests
       run: mvn -B test --file pom.xml
+      working-directory: ./gqs/gqs
 
     - name: Upload JAR artifact
       uses: actions/upload-artifact@v2
       with:
         name: gqs
-        path: target/gqs-1.0-SNAPSHOT.jar
+        path: gqs/gqs/target/gqs-1.0-SNAPSHOT.jar
