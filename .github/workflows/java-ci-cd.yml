@@ -24,7 +24,7 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-      working-directory: ./gqs/gqs
+
 
     - name: Run tests
       run: mvn -B test --file pom.xml
