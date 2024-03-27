@@ -19,8 +19,13 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v3
       with:
-        java-version: '21'
+        java-version: '21'         
         distribution: 'adopt'  
+
+    - name: Use Node.js 20
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
 
     - name: Build with Maven
       run: mvn -B package
