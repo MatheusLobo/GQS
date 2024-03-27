@@ -41,7 +41,7 @@ jobs:
           echo "MAIN_COMMIT_HASH=$(git rev-parse main)" >> $GITHUB_ENV
 
       - name: Run Commitlint
-        run: npx commitlint --from="${{ env.MAIN_COMMIT_HASH }}^..HEAD"
+        run: npx commitlint --from="${{ env.MAIN_COMMIT_HASH }}~1..${{ env.MAIN_COMMIT_HASH }}"
 
       - name: Install dependencies
         run: npm ci
@@ -56,4 +56,3 @@ jobs:
         with:
           name: gqs
           path: gqs/target/gqs-1.0-SNAPSHOT.jar
-
