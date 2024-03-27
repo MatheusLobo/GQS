@@ -1,0 +1,52 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '21'
+        distribution: 'adopt'
+
+    - name: Use Node.js 20
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+
+    - name: Build with Maven
+      run: mvn -B package -f gqs/pom.xml
+
+    - name: Run tests
+      run: mvn -B test -f gqs/pom.xml
+
+    - name: Install commitlint
+      run: npm install -g @commitlint/cli
+
+    - name: Make commitlint executable
+      run: chmod +x node_modules/.bin/commitlint
+
+    - name: Validate commits
+      run: npx commitlint --from=c1b03c4e7a436e8dc43c1f7b3888c6317ba84e59^..c1b03c4e7a436e8dc43c1f7b3888c6317ba84e59
+
+    - name: Generate Semantic Version
+      run: npx semantic-release
+
+    - name: Upload JAR artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: gqs
+        path: gqs/target/gqs-1.0-SNAPSHOT.jar
