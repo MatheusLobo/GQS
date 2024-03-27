@@ -19,8 +19,8 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v3
       with:
-        java-version: '21'         
-        distribution: 'adopt'  
+        java-version: '21'
+        distribution: 'adopt'
 
     - name: Use Node.js 20
       uses: actions/setup-node@v2
@@ -35,6 +35,9 @@ jobs:
 
     - name: Install commitlint
       run: npm install -g @commitlint/cli
+
+    - name: Make commitlint executable
+      run: chmod +x node_modules/.bin/commitlint
 
     - name: Validate commits
       run: npx commitlint --from=HEAD~1
