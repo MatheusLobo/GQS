@@ -41,7 +41,7 @@ jobs:
           echo "MAIN_COMMIT_HASH=$(git rev-parse main)" >> $GITHUB_ENV
 
       - name: Run Commitlint
-        run: npx commitlint --from="${{ env.MAIN_COMMIT_HASH }}~1..${{ env.MAIN_COMMIT_HASH }}"
+        run: npx commitlint --from=9eca92a0f81575c3b1ed4bd1daf5fe9a9cea4920
 
       - name: Install dependencies
         run: npm ci
