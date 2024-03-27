@@ -28,13 +28,13 @@ jobs:
         node-version: '20'
 
     - name: Build with Maven
-      run: mvn -B package
+      run: mvn -B package -f gqs/pom.xml
 
     - name: Run tests
-      run: mvn -B test
+      run: mvn -B test -f gqs/pom.xml
 
     - name: Upload JAR artifact
       uses: actions/upload-artifact@v2
       with:
         name: gqs
-        path: target/gqs-1.0-SNAPSHOT.jar
+        path: gqs/target/gqs-1.0-SNAPSHOT.jar
