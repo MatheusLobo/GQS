@@ -24,5 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Make commitlint.config.mjs executable
+        run: chmod +x commitlint.config.mjs
+
       - name: Run Commitlint
         run: npx commitlint --from=HEAD~1
