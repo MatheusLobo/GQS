@@ -28,4 +28,4 @@ jobs:
         run: chmod +x gqs/commitlint.config.mjs
 
       - name: Run Commitlint
-        run: npx commitlint --from=HEAD^
+        run: sudo npx commitlint --from=HEAD^
