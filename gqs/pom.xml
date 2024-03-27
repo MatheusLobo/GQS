@@ -14,10 +14,11 @@
     <maven.compiler.target>8</maven.compiler.target>
   </properties>
   <dependencies>
+    <!-- Adicionando dependência para o JUnit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.13.2</version> <!-- Versão atualizada do JUnit -->
       <scope>test</scope>
     </dependency>
   </dependencies>
