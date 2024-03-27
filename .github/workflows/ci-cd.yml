@@ -35,11 +35,13 @@ jobs:
       - name: Install commitlint
         run: npm install -g @commitlint/cli
 
-      - name: Make commitlint.config.mjs executable
-        run: chmod +x gqs/commitlint.config.js
+      - name: Get main branch commit hash
+        run: |
+          MAIN_COMMIT=$(git rev-parse main)
+          echo "MAIN_COMMIT_HASH=$MAIN_COMMIT" >> $GITHUB_ENV
 
       - name: Run Commitlint
-        run: npx commitlint --from=$(git rev-parse main)^..$(git rev-parse main)
+        run: npx commitlint --from=$MAIN_COMMIT_HASH^..$MAIN_COMMIT_HASH
 
       - name: Install dependencies
         run: npm ci
