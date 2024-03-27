@@ -43,9 +43,6 @@ jobs:
       - name: Run Commitlint
         run: npx commitlint --from="${{ env.MAIN_COMMIT_HASH }}^..HEAD"
 
-      - name: Print commit hash
-        run: echo "Main branch commit hash: ${{ env.MAIN_COMMIT_HASH }}"
-
       - name: Install dependencies
         run: npm ci
 
