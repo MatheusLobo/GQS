@@ -36,12 +36,12 @@ jobs:
         run: npm install -g @commitlint/cli
 
       - name: Get main branch commit hash
+        id: commit_hash
         run: |
-          MAIN_COMMIT=$(git rev-parse main)
-          echo "MAIN_COMMIT_HASH=$MAIN_COMMIT" >> $GITHUB_ENV
+          echo "MAIN_COMMIT_HASH=$(git rev-parse main)" >> $GITHUB_ENV
 
       - name: Run Commitlint
-        run: npx commitlint --from=$MAIN_COMMIT_HASH^..$MAIN_COMMIT_HASH
+        run: npx commitlint --from=$MAIN_COMMIT_HASH^..HEAD
 
       - name: Install dependencies
         run: npm ci
