@@ -33,6 +33,9 @@ jobs:
     - name: Run tests
       run: mvn -B test -f gqs/pom.xml
 
+    - name: Change permissions for commitlint
+      run: chmod +x $(which commitlint)
+
     - name: Validate commits
       run: npx commitlint --from=HEAD~1
 
