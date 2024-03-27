@@ -19,7 +19,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '11'  # Mantido o JDK 11 conforme solicitado
+          java-version: '20'
           distribution: 'adopt'
 
       - name: Use Node.js 20
@@ -43,12 +43,16 @@ jobs:
       - name: Run Commitlint
         run: npx commitlint --from=$MAIN_COMMIT_HASH
 
+      - name: Set GitHub repository URL
+        run: echo "REPOSITORY_URL=https://github.com/MatheusLobo/GQS" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: npm ci
 
       - name: Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }} 
+          REPOSITORY_URL: ${{ env.REPOSITORY_URL }}
         run: npx semantic-release
 
       - name: Upload JAR artifact
@@ -56,4 +60,3 @@ jobs:
         with:
           name: gqs
           path: gqs/target/gqs-1.0-SNAPSHOT.jar
-
