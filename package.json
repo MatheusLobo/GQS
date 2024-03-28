@@ -2,7 +2,7 @@
   "name": "GQS2024-Facs",
   "version": "1.2.0",
   "description": "Teste",
-  "author": "MatheusLobo <mat_lo@hotmail.com>",
+  "author": "MatheusLobo <mat_lo@hotmail.com>", //eu
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^19.2.1",
