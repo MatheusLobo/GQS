@@ -10,8 +10,6 @@ module.exports = {
         npmPublish: true,
         pkgRoot: './dist',
         tarballDir: './dist',
-        // Aqui você adiciona o token do npm como variável de ambiente
-        npmToken: process.env.NPM_TOKEN,
       },
     ],
     '@semantic-release/git',
