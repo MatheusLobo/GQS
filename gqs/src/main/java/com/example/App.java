@@ -8,5 +8,9 @@ public class App
     	System.out.println( "Olá, Mundo testando unifacs teste 5!" );
     	System.out.println( "Olá, Mundo testando unifacs teste 5!" );
     	System.out.println( "Olá, Mundo testando unifacs teste 5!" );
+    	System.out.println( "Olá, Mundo testando unifacs teste 5!" );
+    	System.out.println( "Olá, Mundo testando unifacs teste 5!" );
+    	System.out.println( "Olá, Mundo testando unifacs teste 5!" );
+    	System.out.println( "Olá, Mundo testando unifacs teste 5!" );
     }
 }
