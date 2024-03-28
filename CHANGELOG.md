@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/MatheusLobo/GQS/compare/v1.0.0...v1.1.0) (2024-03-28)
+
+
+### Features
+
+* Adiciona parte do codigo ([cef2666](https://github.com/MatheusLobo/GQS/commit/cef266690faa2173dbda74b09369d23916172818))
+
 # 1.0.0 (2024-03-28)
 
 
