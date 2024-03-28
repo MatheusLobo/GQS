@@ -53,7 +53,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }} 
           REPOSITORY_URL: ${{ secrets.REPOSITORY_URL }}
-        run: npx semantic-release
+        run: yarn semantic-release
 
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v2
