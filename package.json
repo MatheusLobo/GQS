@@ -1,5 +1,9 @@
 {
   "name": "GQS2024-Facs",
+  "version": "1.0.0",
+  "description": "Teste",
+  "author": "MatheusLobo <mat_lo@hotmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
