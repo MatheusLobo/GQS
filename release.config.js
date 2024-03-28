@@ -8,8 +8,9 @@ module.exports = {
       '@semantic-release/npm',
       {
         npmPublish: true,
-        pkgRoot: './dist',
-        tarballDir: './dist',
+        pkgRoot: './', 
+        tarballDir: './', 
+        npmToken: process.env.NPM_TOKEN,
       },
     ],
     '@semantic-release/git',
