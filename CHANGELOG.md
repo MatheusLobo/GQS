@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/MatheusLobo/GQS/compare/v1.1.0...v1.2.0) (2024-03-28)
+
+
+### Features
+
+* Adiciona novo arquivo ([50483b2](https://github.com/MatheusLobo/GQS/commit/50483b21d95eb921e268de25f62fa46db2863b62))
+
 # [1.1.0](https://github.com/MatheusLobo/GQS/compare/v1.0.0...v1.1.0) (2024-03-28)
 
 
