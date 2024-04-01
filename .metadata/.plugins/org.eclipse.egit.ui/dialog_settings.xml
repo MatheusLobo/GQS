@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel" value="0"/>
+	<list key="EGit.KnownHosts">
+		<item value="bitbucket.org"/>
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/MatheusLobo/BeeCrowd_Java.git"/>
+	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="MatheusLobo &lt;mat_lo@hotmail.com&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="MatheusLobo &lt;mat_lo@hotmail.com&gt;"/>
+	</list>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
 		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
-		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="200,200"/>
-		<item key="STAGING_SASH_FORM_WEIGHT" value="200,200"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
 		<item key="sortItemState" value="false"/>
 	</section>
 	<section name="GitCommitMessageComponent">
@@ -13,6 +28,16 @@
 			<item value="Testes de conectividade2"/>
 			<item value="MatheusLobo &lt;mat_lo@hotmail.com&gt;"/>
 			<item value="582e3beb01570aafdd5fe0c18284933d88bf5383"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+		<list key="C:\Users\MatheusLobo\git\GQS\.git">
+			<item value="false"/>
+			<item value="MatheusLobo &lt;mat_lo@hotmail.com&gt;"/>
+			<item value="&quot;feat: Adiciona parte do codigo&quot;"/>
+			<item value="MatheusLobo &lt;mat_lo@hotmail.com&gt;"/>
+			<item value="437cd94671dce7820afa8f3df4c163a432de7f9e"/>
 			<item value="0"/>
 			<item value="false"/>
 			<item value=""/>
@@ -28,5 +53,15 @@
 			<item value="600"/>
 			<item value="400"/>
 		</list>
+	</section>
+	<section name="GitImportWizard">
+		<item key="GitProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+		<section name="GitImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="546"/>
+			<item key="DIALOG_Y_ORIGIN" value="101"/>
+			<item key="DIALOG_WIDTH" value="749"/>
+			<item key="DIALOG_HEIGHT" value="550"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|5|0|Segoe UI"/>
+		</section>
 	</section>
 </section>
